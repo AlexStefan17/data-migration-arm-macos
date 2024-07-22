@@ -37,6 +37,7 @@ fi
 
 git clone https://github.com/peviitor-ro/search-engine.git /Users/$username/peviitor/search-engine
 cd /Users/$username/peviitor/search-engine
+pwd
 docker build -t fe:latest .
 docker run --name deploy_fe --network mynetwork --ip 172.18.0.13 --rm \
     -v /Users/$username/peviitor/build:/app/build fe:latest npm run build:local
